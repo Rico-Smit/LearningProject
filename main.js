@@ -1,5 +1,5 @@
 let playerTurn = document.getElementById("playerTurn");
-const boxes = document.querySelector(".box");
+const boxes = document.querySelectorAll(".box");
 console.log(boxes);
 const resetTheGame = document.getElementById("reset");
 
@@ -18,10 +18,10 @@ function toggle() {
 
 // Check if elment is empty then asign X or O
 
-boxes.forEach((el) => {
-  el.addEventListener("click", () => {
-    if (!el.innerHTML) {
-      el.innerHTML = icon;
+boxes.forEach((element) => {
+  element.addEventListener("click", () => {
+    if (!element.innerHTML) {
+      element.innerHTML = icon;
       toggle();
       playerTurn();
     }
